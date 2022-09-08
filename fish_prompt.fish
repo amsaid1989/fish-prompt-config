@@ -28,13 +28,8 @@ function fish_prompt
     printf '%s' (fish_git_prompt)
     set_color normal
 
-	# Disabled the subversion messages because it seems to slow the shell and
-	# replaced it with a shell command that gets the revision number using
-	# svn info, grep and awk
+	# Disabled the subversion messages because it seems to slow the shell
 	# printf ' %s' (fish_svn_prompt)
-    set_color white
-		printf ' %s' (svn info 2>/dev/null | grep Revision | awk '{print "("$2")"}')
-    set_color normal
 
     # Line 2
     echo
