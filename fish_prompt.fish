@@ -28,7 +28,8 @@ function fish_prompt
     printf '%s' (fish_git_prompt)
     set_color normal
 
-    printf ' %s' (fish_svn_prompt)
+	# Disabling the subversion messages because it seems to slow the shell
+	# printf ' %s' (fish_svn_prompt)
 
     # Line 2
     echo
